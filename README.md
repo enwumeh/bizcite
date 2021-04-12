@@ -1,9 +1,5 @@
 
 # Fragrances for Less
-
-## Project Description
-
-
 Web app I've designed to sell my hand filled fragrance oils
 
 
