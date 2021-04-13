@@ -1,7 +1,7 @@
 
 # Fragrances for Less
-Web app I've designed to sell my hand filled fragrance oils
-
+Web app I'm building to sell my hand filled fragrance oils
+using PostgreSQL, React, Express, Node
 
 
 ## Wireframes
