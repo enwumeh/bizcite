@@ -1,11 +1,12 @@
 import React from 'react'
-
+import Home from "./routes/Home"
 
 
 const App = () => {
   return (
     <div>
-    hey yall  
+      hey yall  
+         <Home/>
     </div>
   )
 }
