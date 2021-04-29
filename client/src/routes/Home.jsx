@@ -4,7 +4,7 @@ import ByCompany from "../components/ByCompany"
 const Home = () => {
   return (
     <div>
-      fff
+      Home page
       <ByCompany/>
          
     </div>

@@ -3,7 +3,12 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-      header
+      <h1>
+        Smell Amazing for Less!
+      </h1>
+      <h2>
+        Fragrances by Emma
+      </h2>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const ByCompany = () => {
   return (
     <div>
-      khjghdfj
+      fragrances By company
     </div>
   )
 }

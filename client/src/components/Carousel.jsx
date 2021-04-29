@@ -1,6 +1,6 @@
 import React from 'react'
 
-const carousel = () => {
+const Carousel = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const carousel = () => {
   )
 }
 
-export default carousel
+export default Carousel
