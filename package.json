@@ -10,7 +10,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
     "pg": "^8.5.1",
-    "psql": "^0.0.1"
+    "psql": "^0.0.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {},
   "scripts": {
