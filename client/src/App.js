@@ -3,6 +3,8 @@ import Home from "./routes/Home"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Oildetails from "./routes/Oildetails"
 import UpdateOils from "./routes/UpdateOils"
+import Layout from "./components/Layout"
+
 
 
 const App = () => {
@@ -11,19 +13,21 @@ const App = () => {
         <Router>
           <Switch>
             <Route
-            exact path="/"            
-            component={Home}
-            />
-            <Route
-              exact
-              path="/oils/:id/update"
-              component={UpdateOils}
-            />
-            <Route
-              exact
-              path="/oils/:id"
-              component={Oildetails}
-            />
+            exact path="/">
+            <Layout>
+              <Home />
+              </Layout>
+          </Route>
+          <Route exact path="/oils/:id/update">
+          <Layout>
+              <UpdateOils />
+            </Layout>
+            </Route>
+          <Route exact path="/oils/:id">
+          <Layout>
+              <Oildetails />
+            </Layout>
+            </Route>
           </Switch>
         </Router>
       </div >
