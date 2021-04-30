@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Oildetails from "./routes/Oildetails"
 import UpdateOils from "./routes/UpdateOils"
 import Layout from "./components/Layout"
+import { OilsContextProvider } from './context/OilsContext';
 
 
 
 const App = () => {
   return (
+    <OilsContextProvider>
     <div className="container">
         <Router>
           <Switch>
@@ -31,6 +33,7 @@ const App = () => {
           </Switch>
         </Router>
       </div >
+      </OilsContextProvider>
   )
 }
 
