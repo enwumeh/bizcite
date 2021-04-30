@@ -2,7 +2,7 @@ import React from 'react'
 
 const Oildetails = () => {
   return (
-    <div>
+    <div className="details-main">
       oil details
     </div>
   )

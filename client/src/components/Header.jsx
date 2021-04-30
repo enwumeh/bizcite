@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>
+    <div className="header-main">
       <h1>
         Smell Amazing for Less!
       </h1>

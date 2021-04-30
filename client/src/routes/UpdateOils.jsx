@@ -2,7 +2,7 @@ import React from 'react'
 
 const UpdateOils = () => {
   return (
-    <div>
+    <div className="update-main">
       update oils
     </div>
   )

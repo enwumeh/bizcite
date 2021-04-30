@@ -2,7 +2,7 @@ import React from 'react'
 
 const ByCompany = () => {
   return (
-    <div>
+    <div className="bycompany-main">
       fragrances By company
     </div>
   )
