@@ -3,7 +3,7 @@ import '../styles/App.scss'
 
 const Footer = () => {
   return (
-    <div class="footer-main">
+    <div className="footer-main">
       @2021 By Emma Nwumeh
     </div>
   )

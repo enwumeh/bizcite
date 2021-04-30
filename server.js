@@ -4,8 +4,10 @@ const express = require("express");
 const db = require("./server/db");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 //ALL OILS
+app.use(cors());
 app.use(express.json());
 
 app.get("/api/v1/oils", async (req, res) => {
