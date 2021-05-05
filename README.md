@@ -9,14 +9,15 @@ using PostgreSQL, React, Express, Node
  https://lucid.app/lucidchart/ee5a981f-d572-4271-9faa-5ce41a87dc98/view?page=0_0#
 
 
-### feature ideas 
-
+### future feature ideas 
+search by brand
+search bar
 
 
 
 ## Project Schedule
 
-This schedule will be used to keep track of my progress throughout the week and align with our expectations.  
+This schedule will be used to keep track of my progress/expectations.  
 
 |  Day | Feature to work on | Status
 |---|---| ---|
