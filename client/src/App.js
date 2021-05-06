@@ -8,7 +8,6 @@ import { OilsContextProvider } from './context/OilsContext';
 import LandingPage from './routes/LandingPage';
 
 
-
 const App = () => {
   return (
     <OilsContextProvider>
