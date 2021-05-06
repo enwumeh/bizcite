@@ -5,6 +5,7 @@ import Oildetails from "./routes/Oildetails"
 import UpdateOils from "./routes/UpdateOils"
 import Layout from "./components/Layout"
 import { OilsContextProvider } from './context/OilsContext';
+import LandingPage from './routes/LandingPage';
 
 
 
@@ -17,10 +18,10 @@ const App = () => {
             <Route
             exact path="/">
             <Layout>
-              <Home />
+              <LandingPage />
               </Layout>
           </Route>
-          <Route exact path="/oils/:id/update">
+          <Route exact path="/home">
           <Layout>
               <UpdateOils />
             </Layout>
