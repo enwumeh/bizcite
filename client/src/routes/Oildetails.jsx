@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../styles/scss/oil-details.scss'
 
 const Oildetails = () => {
   return (
