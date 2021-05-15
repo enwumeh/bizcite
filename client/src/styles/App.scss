@@ -1,15 +1,16 @@
-@import "variables.scss";
+// @import 'scss/footer';
+@import 'scss/header';
+@import 'scss/home';
+@import 'scss/landing-page';
+@import 'scss/layout';
+@import 'scss/variables';
 
 
-.layout-main{
-  background-color: $bubblegum;
-}
+// h1{
+//   color: rgb(220, 206, 206);
+// }
 
+// h2{
+//   color: rgb(217, 202, 230);
+// }
 
-h1{
-  color: rgb(220, 206, 206);
-}
-
-h2{
-  color: rgb(217, 202, 230);
-}
