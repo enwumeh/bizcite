@@ -1,6 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
+import styles from "../styles/scss/oils.scss";
+
 const Oils = (props) => {
   const { oils, setOils } = useContext(OilsContext);
 

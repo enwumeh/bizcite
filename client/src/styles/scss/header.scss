@@ -1,11 +1,15 @@
 .header-main{
-  background-color: black;
+  position:relative ;
 }
 
 .header-title {
-  background-color: rosybrown;
+  color: rgb(235, 203, 186);
 }
 
+
+.app-title {
+  text-decoration: none;
+}
 .header-subtitle {
-  color: lavender;
+  font-family: Snell Roundhand, cursive		;
 }

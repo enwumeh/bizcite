@@ -1,12 +1,34 @@
 @import "variables.scss";
 
-.landing-main{
-  background-color: fuchsia
+.landing-main {
+  position: relative;
+  top: 20vh;
+  min-height: 75vh;
+  margin: 0 auto;
 }
 .landing-title {
-  color: red;
+  color: rgb(232, 199, 229);
+  font-family: Snell Roundhand, cursive	;
+  font-weight: 200;
+  font-size: 60px;
 }
 
-.landing-subtitle{
-color: lavender;
+.landing-subtitle {
+  font-size: 40px;
+  color: rgb(235, 203, 186);
+  font-weight: 100;
+}
+.landing-text {
+  text-align: center;
+}
+
+.landing-button {
+  background-color: rgb(240, 155, 64);
+  height: 5vh;
+  width: 10vh;
+  border-radius: 10%;
+  border: none;
+  font-size: 1.7vh;
+  font-weight: bold;
+  color: rgb(53, 47, 47);
 }
