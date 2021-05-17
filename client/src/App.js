@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./routes/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Oildetails from "./routes/Oildetails";
+import About from "./routes/About";
 import Oils from "./components/Oils";
 import Layout from "./components/Layout";
 import { OilsContextProvider } from "./context/OilsContext";
@@ -21,6 +22,11 @@ const App = () => {
             <Route exact path="/home">
               <Layout>
                 <Home />
+              </Layout>
+            </Route>
+            <Route exact path="/about">
+              <Layout>
+                <About/>
               </Layout>
             </Route>
             <Route exact path="/oils">
