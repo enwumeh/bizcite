@@ -2,6 +2,8 @@ import React, { useEffect, useContext } from "react";
 import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
 import styles from "../styles/scss/oils.scss";
+import Layout from "../components/Layout";
+
 
 const Oils = (props) => {
   const { oils, setOils } = useContext(OilsContext);
@@ -19,6 +21,7 @@ const Oils = (props) => {
     getData();
   }, []);
   return (
+    <Layout>
     <div className="oils-main">
       {oils.map(oil => {
         return (
@@ -31,7 +34,8 @@ const Oils = (props) => {
       }
 
       )}
-    </div>
+      </div>
+      </Layout>
   );
 };
 

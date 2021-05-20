@@ -2,9 +2,10 @@
 
 .landing-main {
   position: relative;
-  top: 20vh;
-  min-height: 75vh;
+  // top: 20vh;
+  min-height: 100vh;
   margin: 0 auto;
+  background-color: $bubblegum;
 }
 .landing-title {
   color: rgb(232, 199, 229);

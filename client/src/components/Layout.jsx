@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "./Header"
 import Footer from "./Footer"
 import '../styles/scss/layout.scss'
-import NavBar from "./NavBar"
+import NavBar from "./NavBar";
 
 
 
@@ -12,7 +12,7 @@ const Layout = (props) => {
       <Header />
       <NavBar/>
       {props.children}
-      <Footer />
+      <Footer/>
     </div>
   )
 }

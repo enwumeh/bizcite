@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "../styles/scss/about.scss";
+import Layout from "../components/Layout";
+
 
 const About = () => {
   return (
+    <Layout>
     <div class="about-div">
       <p class="about-p">
         It all started when I was gifted Pink Friday by Nicki Minaj Perfume and
@@ -17,7 +20,8 @@ const About = () => {
         fragrances in mind. Smell amazing all day for just a fraction of the
         price. Find your new signature scent!
       </p>
-    </div>
+      </div>
+      </Layout>
   );
 };
 
