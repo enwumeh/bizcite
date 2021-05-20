@@ -1,16 +1,23 @@
 @import "variables.scss";
 
 .home-main {
-  min-height: 75vh;
+  min-height: 65vh;
 }
 
 .home-button {
   background-color: rgb(240, 155, 64);
-  height: 5vh;
-  width: 10vh;
+  height: 9vh;
+  width: 20vh;
   border-radius: 10%;
   border: none;
   font-size: 1.7vh;
   font-weight: bold;
   color: rgb(53, 47, 47);
+  position: relative;
+  padding: 4vh;
+  top: -20vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }

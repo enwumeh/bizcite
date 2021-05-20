@@ -14,7 +14,8 @@ ul.big-list {
   float:left;
   list-style-type: none;
   width: auto;
-  display: in-line;
+  display: flex;
+  justify-content: center;
   padding: 5vh 10vh 5vh 10vh;
   font-size: 4vh;
 }
@@ -24,8 +25,9 @@ ul.big-list {
 }
 
 a.Link {
-  color: brown;
+  color: rgb(172, 133, 86);
   position: relative;
+  display: flex;
   text-decoration: none;
   text-align: center;
 }

@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <Layout>
     <div className="home-main">
-      <Link to="/oils">
-        </Link>
+        
       </div>
+      <Link to="/oils">
       <button className="home-button">See all fragrances</button>
-
+        </Link>
       </Layout>
   )
 }
