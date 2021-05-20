@@ -6,8 +6,8 @@ import Layout from "../components/Layout";
 const About = () => {
   return (
     <Layout>
-    <div class="about-div">
-      <p class="about-p">
+    <div className="about-div">
+      <p className="about-p">
         It all started when I was gifted Pink Friday by Nicki Minaj Perfume and
         was OBSESSED. When it finished (shortly after), I looked for more and
         stumbled across an inexpensive body oil that claimed to smell just like

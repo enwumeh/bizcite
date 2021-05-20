@@ -9,9 +9,10 @@ const Home = () => {
     <Layout>
     <div className="home-main">
       <Link to="/oils">
-        <button class="home-button">See all fragrances</button>
         </Link>
       </div>
+      <button className="home-button">See all fragrances</button>
+
       </Layout>
   )
 }

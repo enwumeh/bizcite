@@ -2,5 +2,27 @@
 
 
 .oils-main {
-  min-height: 75vh;
+  min-height: 55vh;
+  top: 40vh;
 }
+
+.oils-list {
+  padding: 1.9vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  position: relative;
+  top: 6vh;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+// justify-content: start, center, space-between, space-around, space-evenly
+// flex-direction: row, row-reverse, column, column-reverse
+// flex-wrap: nowrap, wrap, wrap-reverse
+// align-items: stretch, center, start, end
+// align-items: stretch, center, start, end
+// align-content: start, center, space-between, space-around

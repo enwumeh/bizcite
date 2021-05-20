@@ -1,2 +1,33 @@
 @import "variables.scss";
 
+ul.big-list {
+  background-color: rgb(226, 218, 224);
+  width: 100%;
+  min-height: 10vh;
+  position: relative;
+  display: flex;
+  text-align: center;
+
+}
+
+.list {
+  float:left;
+  list-style-type: none;
+  width: auto;
+  display: in-line;
+  padding: 5vh 10vh 5vh 10vh;
+  font-size: 4vh;
+}
+
+.nav-div {
+  margin: 0 auto
+}
+
+a.Link {
+  color: brown;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+}
+
+

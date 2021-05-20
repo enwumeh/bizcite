@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-// import "./../index.css";
-// import avi from "./../images/nav-pic.jpeg";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import styles from '../styles/scss/nav-bar.scss';
+
 
 const Nav = () => {
   
@@ -10,6 +10,7 @@ const Nav = () => {
 
 
   return (
+    <div className="nav-div">
       <ul className="big-list">
         <li className="list">
           <Link
@@ -37,6 +38,7 @@ const Nav = () => {
           </Link>
         </li>
       </ul>
+      </div>
   );
 };
 

@@ -3,6 +3,7 @@ import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
 import styles from "../styles/scss/oils.scss";
 import Layout from "../components/Layout";
+import { Link } from 'react-router-dom';
 
 
 const Oils = (props) => {
@@ -20,22 +21,21 @@ const Oils = (props) => {
     };
     getData();
   }, []);
+
   return (
     <Layout>
-    <div className="oils-main">
-      {oils.map(oil => {
-        return (
-          <div key={oil.id}>
-            <div>{oil.id}</div>
-            <div>{oil.companytype}</div>
-            <div>{oil.name}</div>
+      <div className="oils-main">
+        {oils.map((oil) => {
+          return (
+            <Link to="/oils/:id">
+            <div className="oils-list" key={oil.id}>
+              <div>{oil.companytype} by {oil.name}</div>
             </div>
-        )
-      }
-
-      )}
+            </Link>
+          );
+        })}
       </div>
-      </Layout>
+    </Layout>
   );
 };
 
