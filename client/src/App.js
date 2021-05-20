@@ -8,16 +8,17 @@ import Layout from "./components/Layout";
 import { OilsContextProvider } from "./context/OilsContext";
 import LandingPage from "./routes/LandingPage";
 
+
 const App = () => {
+
+  
   return (
     <OilsContextProvider>
       <div className="container">
         <Router>
           <Switch>
             <Route exact path="/">
-              <Layout>
                 <LandingPage />
-              </Layout>
             </Route>
             <Route exact path="/home">
               <Layout>
@@ -44,6 +45,13 @@ const App = () => {
       </div>
     </OilsContextProvider>
   );
+  return (
+    <React.Fragment>
+      <div>
+        c
+     </div>
+    </React.Fragment>
+  )
 };
 
 export default App;
