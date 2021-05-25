@@ -27,12 +27,39 @@ VALUES
 
 ALTER TABLE oils ADD description varchar(300);
 
-INSERT INTO oils (description) VALUES ('an alluring, smooth and warm fragrance that exudes femininity. This one will turn heads. Smells like a chocolate milkshake in the best way. Notes include almond, vanilla, coffee, tonka bean, and cocoa with bergamot and jasmine.'), ('Sweet and Sophisticated, this one is like luxurious cotton candy with  hint of woody spiciness. Very addictive'), ('Clean and girly. Roses on a warm spring day. Smells like a pretty, flowery baby powder.'),
+INSERT INTO oils
+  (description)
+VALUES
+  ('an alluring, smooth and warm fragrance that exudes femininity. This one will turn heads. Smells like a chocolate milkshake in the best way. Notes include almond, vanilla, coffee, tonka bean, and cocoa with bergamot and jasmine.'),
+  ('Sweet and Sophisticated, this one is like luxurious cotton candy with  hint of woody spiciness. Very addictive'),
+  ('Clean and girly. Roses on a warm spring day. Smells like a pretty, flowery baby powder.'),
   ('This one is smooth and sweet. It has notes of pink pepper, pear, orange blossom, and jasmine. Refreshingly bold and feminine.
-'), ('A compliment getter, good signature scent. Notes of mandarin, pear, and green notes.'), ('Playful Fruity scent. It has key notes of star fruit, pink floral petals, Italian mandarin, and boysenberry.'),('This fragrance is a gorgeous mix of spice and  vanilla. You will smell deliciously warm yet sophisticated.');
+'),
+  ('A compliment getter, good signature scent. Notes of mandarin, pear, and green notes.'),
+  ('Playful Fruity scent. It has key notes of star fruit, pink floral petals, Italian mandarin, and boysenberry.'),
+  ('This fragrance is a gorgeous mix of spice and  vanilla. You will smell deliciously warm yet sophisticated.');
 
-ALTER TABLE oils ADD type varchar(100);
+UPDATE oils SET description = 'an alluring, smooth and warm fragrance that exudes femininity. This one will turn heads. Smells like a chocolate milkshake in the best way. Notes include almond, vanilla, coffee, tonka bean, and cocoa with bergamot and jasmine.' WHERE id = 1;
+UPDATE oils SET description = 'Sweet and Sophisticated, this one is like luxurious cotton candy with  hint of woody spiciness. Very addictive' WHERE id = 2;
+UPDATE oils SET description = 'Clean and girly. Roses on a warm spring day. Smells like a pretty, flowery baby powder' WHERE id = 3;
+UPDATE oils SET description = 'This one is smooth and sweet. It has notes of pink pepper, pear, orange blossom, and jasmine. Refreshingly bold and feminine' WHERE id = 4;
+UPDATE oils SET description = 'A compliment getter, good signature scent. Notes of mandarin, pear, and green notes' WHERE id = 5;
+UPDATE oils SET description = 'Playful Fruity scent. It has key notes of star fruit, pink floral petals, Italian mandarin, and boysenberry' WHERE id = 6;
+UPDATE oils SET description = 'This fragrance is a gorgeous mix of spice and  vanilla. Deliciously warm and sophisticated' WHERE id = 7;
 
-UPDATE oils SET description = "an alluring, smooth and warm fragrance that exudes femininity. This one will turn heads. Smells like a chocolate milkshake in the best way. Notes include almond, vanilla, coffee, tonka bean, and cocoa with bergamot and jasmine." WHERE id = 1;
+ALTER TABLE oils DROP COLUMN type;
+
+ALTER TABLE oils ADD type char(3);
+ALTER TABLE oils ADD url varchar(50);
+
+
+UPDATE oils SET url = 'https://i.imgur.com/cw4TYuI.jpg' WHERE id = 2;
+UPDATE oils SET url = 'https://i.imgur.com/Spq1cj3.jpg' WHERE id = 2;
+
+
+
+
+
+
 
 

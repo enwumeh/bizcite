@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/scss/about.scss";
 import Layout from "../components/Layout";
+import { Link } from "react-router-dom";
 
 
 const About = () => {
@@ -20,6 +21,9 @@ const About = () => {
         fragrances in mind. Smell amazing all day for just a fraction of the
         price. Find your new signature scent!
       </p>
+      <Link to="/oils">
+      <button className="home-button">See all fragrances</button>
+        </Link>
       </div>
       </Layout>
   );

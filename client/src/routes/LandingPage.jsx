@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 
 const LandingPage = () => {
   return (
+    <div>
     <div className="landing-main">
       <Header/>
       <div className="landing-text">
@@ -20,8 +21,10 @@ const LandingPage = () => {
         <button className="landing-button">Shop now!</button>
         </Link>
       </div>
+      </div>
       <Footer/>
       </div>
+    
   );
 };
 
