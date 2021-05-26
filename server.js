@@ -9,7 +9,11 @@ const cors = require("cors");
 //ALL OILS
 app.use(cors());
 app.use(express.json());
+if (process.env.NODE_ENV === 'production')
+//serve static content
+{
 
+}
 app.get("/api/v1/oils", async (req, res) => {
   try {
     const oilsQuery = await db.query("SELECT * FROM oils")
@@ -98,7 +102,7 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
   }
 });
 
-
+//process.env.NODE_ENV => production or undefined
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);

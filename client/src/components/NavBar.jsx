@@ -22,8 +22,8 @@ const Nav = () => {
           <Link className="Link" to="/oils">
             Shop
           </Link>
-        </li>
-      </ul>
+          </li>
+        </ul>
     </div>
   );
 };

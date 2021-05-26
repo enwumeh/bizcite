@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/scss/about.scss";
 import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
+import photo from "../images/me-photo.jpeg";
 
 const About = () => {
   return (
@@ -25,19 +26,22 @@ const About = () => {
           compounds, natural isolates and a carrier oil (DPG) to blend
           everything components together and make the fragrance wearable. The
           manufacturing process is regulated by the IFRA (International
-          Fragrance Association) so the fragrances are hypoallergenic (more info
-          on the IFRA 
+          Fragrance Association) so all oils are hypoallergenic (more info on
+          the IFRA
           <a
+            target="blank" rel="noopener noreferrer"
             id="ifra-link"
             href="https://ifrafragrance.org/safe-use/introduction"
           >
-            {" "}here
+            {" "}
+            here
           </a>
+          )<button id="seeall-button">See all fragrances!</button>
         </p>
-
-        <Link to="/oils">
-          <button className="home-button">See all fragrances</button>
-        </Link>
+        <div id="me-div">
+          <img id="me-photo" src={photo} alt="me" />
+          </div>
+        <Link to="/oils"></Link>
       </div>
     </Layout>
   );

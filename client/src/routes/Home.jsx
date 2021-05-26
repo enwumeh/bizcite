@@ -11,7 +11,7 @@ const Home = () => {
         
       </div>
       <Link to="/oils">
-      <button className="home-button">See all fragrances</button>
+      <button id="home-button">See all fragrances</button>
         </Link>
       </Layout>
   )
