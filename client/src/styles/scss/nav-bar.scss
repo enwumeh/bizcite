@@ -7,26 +7,24 @@ ul.big-list {
   position: relative;
   justify-content: center;
   display: flex;
-
 }
 
 .list {
-  box-shadow: 0px 5px 0px 0px  rgba(65, 63, 63, 0.5);
+  box-shadow: 0px 4px 0px 0px rgba(65, 63, 63, 0.5);
   list-style-type: none;
   width: auto;
   display: flex;
- content: center;
+  content: center;
   padding: 5vh 15vh 5vh 15vh;
   font-size: 4vh;
 }
 
 .nav-div {
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 a.Link {
-  transition: 0.3s ease;
-  
+  transition: 0.1s linear;
   color: rgb(172, 133, 86);
   position: relative;
   display: flex;
@@ -35,9 +33,10 @@ a.Link {
 }
 
 a.Link:hover {
-  border-top:  solid #836719;
-  border-bottom:  solid#836719;
-  // padding: 6px 0; 
+  position: relative;
+  border-bottom: 1px solid#a28536;
+  color: #ddbd65;
+  overflow: hidden;
+
+  // -webkit-animation: circle 1.5s ease-in forwards;
 }
-
-

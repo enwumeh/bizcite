@@ -4,11 +4,14 @@ import { OilsContext } from "../context/OilsContext";
 import styles from "../styles/scss/oils.scss";
 import Layout from "../components/Layout";
 import { Link } from 'react-router-dom';
-import Oildetails from "../routes/Oildetails";
+
 
 
 
 const Oils = () => {
+
+  
+
   const { oils, setOils } = useContext(OilsContext);
 
   useEffect(() => {
@@ -30,12 +33,11 @@ const Oils = () => {
         {oils.map((oil) => {
           return (
             <div className="oils-list" key={oil.id}>
-              <div>{oil.companytype} by {oil.name}</div>
-            <Link to="/oils/:id">
+              <div>{oil.name} by {oil.companytype}</div>
+              <Link to={`oils/${oil.id}`}>
               
                 <img className="oil-pic" src={oil.url}></img>
             </Link>
-              {/* <Oildetails oil={oils}/> */}
             </div>
           );
         })}
