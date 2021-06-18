@@ -1,3 +1,4 @@
+
 import React, { useEffect, useContext } from "react";
 import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
@@ -9,8 +10,6 @@ import { Link } from 'react-router-dom';
 
 
 const Oils = () => {
-
-  
 
   const { oils, setOils } = useContext(OilsContext);
 
@@ -34,7 +33,7 @@ const Oils = () => {
           return (
             <div className="oils-list" key={oil.id}>
               <div>{oil.name} by {oil.companytype}</div>
-              <Link to={`oils/${oil.id}`}>
+              <Link to={`/oils/${oil.id}`}>
               
                 <img className="oil-pic" src={oil.url}></img>
             </Link>

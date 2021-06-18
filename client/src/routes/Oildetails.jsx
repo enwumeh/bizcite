@@ -12,15 +12,20 @@ const Oildetails = () => {
 
   const params = useParams();
   const oilMatch = oils.find((oil) => oil.id == params.id);
+  // setOils(oilMatch);
 
-  console.log("olz",oils)
+  console.log("olz", oils)
   return (
+
+    oilMatch? 
     <Layout>
     <div className="details-main">
         oil details
          {oilMatch.name}
     </div>
-    </Layout>
+      </Layout>
+      :
+      <div>srry no oil</div>
   )
 }
 
