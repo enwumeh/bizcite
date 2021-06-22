@@ -3,24 +3,27 @@
 
 .oils-main {
   min-height: 72.7vh;
+  position: relative;
   top: 40vh;
+  width: 10px;
 }
 
+
 .oils-list {
-  padding: 2.9vh;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  position: relative;
+  padding: 4.9vh;
+  max-width: 30%;
+  display: inline-block;
+  // flex-wrap: wrap;
   font-family: fantasy;
   font-size: 2.5vh;
-  font-weight:600;
-  // top: 6vh;
+  font-weight: 600;
 }
+
 .oil-pic {
-  width: 13vh;
-  height: 12vh;
+  width: 20vh;
+  height: 22vh;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -32,3 +35,4 @@ a {
 // align-items: stretch, center, start, end
 // align-items: stretch, center, start, end
 // align-content: start, center, space-between, space-around
+// 

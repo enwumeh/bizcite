@@ -1,6 +1,23 @@
 @import "variables.scss";
 
 
+
+
+#detail-pic {
+  width: 480px;
+  height: 480px;
+}
+
+#detail-title{
+  font-size: 30px;
+}
+
+#detail-blerb {
+  font-size: 20px;
+  width: 45%;
+}
+
 .details-main {
   min-height: 65vh;
+  padding-left: 200px;
 }
