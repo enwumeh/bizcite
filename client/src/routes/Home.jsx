@@ -44,6 +44,10 @@ const Home = () => {
           );
         })}
       </div>
+      <Link to="/oils">
+
+        <button id="seeall-button">See all fragrances!</button>
+        </Link>
     </Layout>
   ) : (
     <div>dd</div>
