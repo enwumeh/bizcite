@@ -12,7 +12,7 @@ const Oildetails = () => {
   // setOils(oilMatch);
 
   console.log("olz", oils);
-  
+
   return oilMatch ? (
     <Layout>
       <div className="details-main">
