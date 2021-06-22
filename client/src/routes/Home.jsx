@@ -30,11 +30,12 @@ const Home = () => {
 
   return oils ? (
     <Layout>
+      <div className="home-title">Best Sellers</div>
       <div id="pop-main">
         {popOils.map((oil) => {
           return (
             <div className="pop-list" key={oil.id}>
-              <div>
+              <div id="oil-div">
                 <Link to={`/oils/${oil.id}`}>
                   <img className="oil-pic" src={oil.url}></img>
                 </Link>
