@@ -4,24 +4,22 @@
   min-height: 65vh;
 }
 
-#home-button {
-  background-color: rgb(240, 155, 64);
-  ;
-  ;
-  height: 9vh;
-  width: 20vh;
-  border-radius: 10%;
-  border: none;
-  font-size: 1.7vh;
-  font-weight: bold;
-  color: rgb(53, 47, 47);
+#flowers-photo {
+  width: 98%;
+  max-height: 85vh;
+  background-position: 100% 50%;
   position: relative;
-  padding: 4vh;
-  top: -20vh;
+}
+
+.image-div {
+  position: relative;
+  top: 4vh;
+  max-height: 75vh;
+}
+
+.flower-div{
   // display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
+  width: 75%;
 }
 
 .pop-list {
@@ -34,20 +32,40 @@
 
 .pop-main{
   margin: 0 auto;
-  // display: flex;
-  justify-content: center;
+min-height: 300h; 
+ justify-content: center;
 
 }
 
 #oil-div {
   text-align: center;
-  color: white;
+  color: rgb(28, 22, 17);
+  font-family: fantasy;
+  font-size: 2.5vh;
+  font-weight: bold;
 }
 
 .home-title {
-  font-size: 4vh;
-  // font-family: Snell Roundhand, cursive;
+  font-size: 6vh;
+  font-family: fantasy;
   text-align: center;
-  padding: 8vh;
-  color: #ebcbba;
+  padding: 28vh;
+  color: #070707;
+}
+
+#seeall-button {
+  background-color:rgb(245, 212, 183);
+  height: 8.5vh;
+  width: 18vh;
+  border-radius: 5%;
+  border: none;
+  font-size: 2.7vh;
+  font-weight: bold;
+  position: absolute;
+  color: rgb(53, 47, 47);
+  z-index: 1;
+  top: 70%;
+  left: 44%;
+  justify-content: center;
+  text-align: center;
 }

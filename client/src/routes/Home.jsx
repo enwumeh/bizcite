@@ -3,6 +3,7 @@ import styles from "../styles/scss/home.scss";
 import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
 import { Link } from "react-router-dom";
+import flowers from "../images/flowers.jpeg";
 import Layout from "../components/Layout";
 
 const Home = () => {
@@ -30,6 +31,18 @@ const Home = () => {
 
   return oils ? (
     <Layout>
+      <div className="image-div">
+      <Link to="/oils">
+        <button id="seeall-button">See all fragrances!</button>
+        </Link>
+        {/* <div className="flower-div"> */}
+        <img id="flowers-photo" src={flowers} alt="flowers" />
+        {/* <img id="flowers-photo" src={flowers} alt="flowers" /> */}
+        {/* <img id="flowers-photo" src={flowers} alt="flowers" /> */}
+        {/* </div> */}
+       
+
+      </div>
       <div className="home-title">Best Sellers</div>
       <div id="pop-main">
         {popOils.map((oil) => {
@@ -45,10 +58,7 @@ const Home = () => {
           );
         })}
       </div>
-      <Link to="/oils">
-
-        <button id="seeall-button">See all fragrances!</button>
-        </Link>
+      
     </Layout>
   ) : (
     <div>dd</div>

@@ -9,7 +9,7 @@ const Header = () => {
         <Link className="app-title" to='/'>
 
       <h1 className="header-title">
-        Smell Amazing for Less!
+        Smell Luxurious for Less
       </h1>
       <h2 className="header-subtitle">
           Fragrances by Emma

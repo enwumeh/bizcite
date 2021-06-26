@@ -13,7 +13,7 @@
 #me-photo {
   padding-right: 5vh;
   position: relative;
-  top: -45vh;
+  top: -38vh;
   left: 8%;
   display: block;
   float: right;
@@ -29,24 +29,27 @@
 }.about-p {
   max-width: 90vh;
   font-size: 2.3vh;
-  color: white;
+  color: rgb(19, 18, 18);
   position: relative;
   text-align: center;
   left: -21%;
+  top: 6vh;
+
   margin: 0 auto;
 }
 
-#seeall-button {
-  background-color: rgb(240, 155, 64);
-  height: 9vh;
+#seeall-button1 {
+  background-color:rgb(245, 212, 183);
+  height: 7vh;
+  z-index:50;
   width: 20vh;
-  border-radius: 10%;
+  border-radius: 5%;
   border: none;
   font-size: 1.7vh;
   font-weight: bold;
   color: rgb(53, 47, 47);
   position: relative;
-  padding: 4vh;
+  // padding: 4vh;
   top: 6vh;
   display: flex;
   justify-content: center;

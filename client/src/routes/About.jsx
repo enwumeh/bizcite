@@ -36,7 +36,7 @@ const About = () => {
             {" "}
             here
           </a>
-          )<button id="seeall-button">See all fragrances!</button>
+          )<button id="seeall-button1">See all fragrances!</button>
         </p>
         <div id="me-div">
           <img id="me-photo" src={photo} alt="me" />

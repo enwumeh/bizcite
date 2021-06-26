@@ -13,7 +13,7 @@ const LandingPage = () => {
   return (
     <div>
     <div className="landing-main">
-      <Header/>
+      {/* <Header/> */}
       <div className="landing-text">
         <p className="landing-title">Fragrances By Emmanuela</p>
         <h2 className="landing-subtitle">Find your Signature frangrance</h2>

@@ -8,15 +8,18 @@
   background-color: $copper;
 }
 .landing-title {
-  color: rgb(60, 37, 12);  font-family: Snell Roundhand, cursive	;
-  font-weight: 200;
+  color:  rgb(122, 82, 38);  
+  font-family: Snell Roundhand, cursive	;
+  font-weight: 100;
   font-size: 60px;
 }
 
 .landing-subtitle {
   font-size: 40px;
-  color: rgb(235, 203, 186);
+  color: rgb(245, 212, 183);
   font-weight: 100;
+  font-family: Trattatello, fantasy	;
+
 }
 .landing-text {
   text-align: center;
@@ -25,14 +28,14 @@
 }
 
 .landing-button {
-  background-color: rgb(240, 155, 64);
+  background-color:rgb(245, 212, 183);
   height: 5vh;
   width: 10vh;
   border-radius: 10%;
   border: none;
   font-size: 1.7vh;
   font-weight: bold;
-  color: rgb(53, 47, 47);
+  color: rgb(67, 53, 53);
   position: relative;
   top: 9vh;
 }
