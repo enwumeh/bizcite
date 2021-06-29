@@ -17,11 +17,11 @@ if (process.env.NODE_ENV === 'production')
 app.get("/api/v1/oils", async (req, res) => {
   try {
     const oilsQuery = await db.query("SELECT * FROM oils")
-    // console.log(oilsQuery)
+    // console.log(process.env)
     res.status(200).json({
   status: "success",
       data: {
-    length: oilsQuery.rowCount,
+    length: oilsQuery.rowCount, 
     oils: oilsQuery.rows
   }
 });
