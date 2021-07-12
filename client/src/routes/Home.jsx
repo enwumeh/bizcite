@@ -50,7 +50,7 @@ const Home = () => {
             <div className="pop-list" key={oil.id}>
               <div id="oil-div">
                 <Link to={`/oils/${oil.id}`}>
-                  <img className="oil-pic" src={oil.url}></img>
+                  <img className="oil-pic" src={oil.url} alt="pics"></img>
                 </Link>
                 <div>{oil.name}</div>
               </div>

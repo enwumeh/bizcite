@@ -30,7 +30,7 @@ const Oils = () => {
             <div className="oils-list" key={oil.id}>
               <div >
                 <Link to={`/oils/${oil.id}`}>
-                  <img className="oil-pic" src={oil.url}></img>
+                  <img className="oil-pic" src={oil.url} alt="oils"></img>
                 </Link>
                 <div>
                   {oil.name} 
