@@ -19,6 +19,12 @@
   color: rgb(245, 212, 183);
   font-weight: 100;
   font-family: Trattatello, fantasy	;
+  // transition-delay: 250ms;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+  
+  // visibility: hidden;
+  // transition-property: margin-right;
 
 }
 .landing-text {
@@ -37,5 +43,5 @@
   font-weight: bold;
   color: rgb(67, 53, 53);
   position: relative;
-  top: 9vh;
+  top: 18vh;
 }

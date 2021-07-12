@@ -15,7 +15,7 @@ const LandingPage = () => {
     <div className="landing-main">
       {/* <Header/> */}
       <div className="landing-text">
-        <p className="landing-title">Fragrances By Emmanuela</p>
+        <p className="landing-title">Essences by Emma</p>
         <h2 className="landing-subtitle">Find your Signature frangrance</h2>
         <Link to='/home'>
         <button className="landing-button">Shop now!</button>
