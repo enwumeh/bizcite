@@ -17,7 +17,7 @@ const Oildetails = () => {
     <Layout>
       <div className="details-main">
         <div id="detail-title">{oilMatch.name}</div>
-        <img id="detail-pic" src={oilMatch.url}></img>
+        <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
         <div id="detail-blerb"> {oilMatch.description}</div>
       </div>
     </Layout>
