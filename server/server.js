@@ -1,6 +1,8 @@
+
+
 require("dotenv").config();
 const express = require("express");
-// const morgan = require('morgan');
+const functionz = require('firebase-functions');
 const db = require("./db/index.js");
 const app = express();
 const bodyParser = require("body-parser");
@@ -14,6 +16,27 @@ if (process.env.NODE_ENV === 'production')
 {
 
 }
+
+//middleware
+// app.use(function (_req, res, next) {
+//   res.header("Access-Control-Allow-Origin", process.env.CLIENT_APP_URL);
+  
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+
+//   next();
+// });
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+  next();
+})
+
+
 app.get("/api/v1/oils", async (req, res) => {
   try {
     const oilsQuery = await db.query("SELECT * FROM oils")
@@ -107,3 +130,5 @@ const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
 });
+
+exports.app = functionz.https.onRequest(app);
