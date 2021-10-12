@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+// import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import styles from "../styles/scss/nav-bar.scss";
+import "../styles/scss/nav-bar.scss";
 
 const Nav = () => {
   return (

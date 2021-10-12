@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import styles from "../styles/scss/home.scss";
+import "../styles/scss/home.scss";
 import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
 import { Link } from "react-router-dom";
@@ -25,8 +25,8 @@ const Home = () => {
   const popOils = oils.filter(
     (oil) =>
       oil.name === "Good Girl" ||
-      oil.name == "Jimmy Choo" ||
-      oil.name == "Baccarat Rouge"
+      oil.name === "Jimmy Choo" ||
+      oil.name === "Baccarat Rouge"
   );
 
   return oils ? (

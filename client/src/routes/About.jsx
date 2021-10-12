@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/scss/about.scss";
+import "../styles/scss/about.scss";
 import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
 import photo from "../images/me-photo.jpeg";

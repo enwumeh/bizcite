@@ -1,8 +1,6 @@
-
-
 require("dotenv").config();
 const express = require("express");
-const functionz = require('firebase-functions');
+const functions = require('firebase-functions');
 const db = require("./db/index.js");
 const app = express();
 const bodyParser = require("body-parser");
@@ -131,4 +129,4 @@ app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
 });
 
-exports.app = functionz.https.onRequest(app);
+exports.app = functions.https.onRequest(app);
