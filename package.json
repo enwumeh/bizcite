@@ -1,40 +1,18 @@
 {
-  "name": "bizcite",
+  "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "server directory for perfumery",
   "main": "server.js",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "cord": "^1.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "framer-motion": "^4.1.17",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.7",
-    "pg": "^8.5.1",
-    "psql": "^0.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scroll": "^1.8.2",
-    "sass": "^1.35.2"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server",
-    "start": "node server.js",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/enwumeh/bizcite.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Emmanuela Nwumeh",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/enwumeh/bizcite/issues"
-  },
-  "homepage": "https://github.com/enwumeh/bizcite#readme"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "openssl": "^1.1.0",
+    "readline": "^1.3.0",
+    "zlib": "^1.0.5"
+  }
 }
