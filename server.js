@@ -4,15 +4,24 @@ const db = require("./db/index.js");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const path = require("path");
+
+
+//process.env.PORT
+//process.env.NODE_ENV => prodution or undefined
 
 //ALL OILS
 app.use(cors());
 app.use(express.json());
+
+// app.use(express.static(path.join(__dirname, "client/build")));
 if (process.env.NODE_ENV === 'production')
 //serve static content
 {
-
+  app.use(express.static(path.join(__dirname, "client/build")));
 }
+// console.log(path.join(__dirname, "client/build"));
+
 
 //middleware
 // app.use(function (_req, res, next) {
@@ -127,5 +136,6 @@ const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
 });
+console.log("PATH HERE==>",process.env )
 
 // exports.app = functions.https.onRequest(app);
