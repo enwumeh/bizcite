@@ -23,18 +23,15 @@ const Oils = () => {
 
   return (
     <Layout>
-      
       <div id="oils-main">
         {oils.map((oil) => {
           return (
             <div className="oils-list" key={oil.id}>
-              <div >
+              <div>
                 <Link to={`/oils/${oil.id}`}>
                   <img className="oil-pic" src={oil.url} alt="oils"></img>
                 </Link>
-                <div>
-                  {oil.name} 
-                </div>
+                <div>{oil.name}</div>
               </div>
             </div>
           );
