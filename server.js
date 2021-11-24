@@ -130,7 +130,9 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
     console.log("NAWAOOOOO",err)
   }
 });
-
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__direct, "client/build/index.html"))
+})
 //process.env.NODE_ENV => production or undefined
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
