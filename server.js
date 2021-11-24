@@ -127,7 +127,7 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
     })
   }
   catch (err) {
-    console.log(err)
+    console.log("NAWAOOOOO",err)
   }
 });
 
@@ -136,6 +136,6 @@ const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
 });
-console.log("PATH HERE==>",process.env )
+// console.log("PATH HERE==>",process.env )
 
 // exports.app = functions.https.onRequest(app);

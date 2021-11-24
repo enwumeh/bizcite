@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./routes/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Oildetails from "./routes/Oildetails";
 import About from "./routes/About";
 import Oils from "./components/Oils";
@@ -14,23 +14,14 @@ const App = () => {
     <OilsContextProvider>
       <div className="container">
         <Router>
-          <Switch>
-            <Route exact path="/">
-              <LandingPage />
-            </Route>
-            <Route exact path="/home">
-              <Home />
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-            <Route exact path="/oils">
-              <Oils />
-            </Route>
-            <Route exact path="/oils/:id">
-                <Oildetails />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<LandingPage/>}/>
+            {/* <LandingPage /> */}
+            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/about" element={<About />}/>
+            <Route exact path="/oils" element={<Oils />} />
+            <Route exact path="/oils/:id" element={<Oildetails />}/>
+          </Routes>
         </Router>
       </div>
     </OilsContextProvider>
