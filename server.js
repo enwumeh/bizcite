@@ -5,6 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
+const port = process.env.PORT || 3002;
 
 
 //process.env.PORT
@@ -131,10 +132,9 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
   }
 });
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__direct, "client/build/index.html"))
+  res.sendFile(path.join(__dirname, "client/build/index.html"))
 })
 //process.env.NODE_ENV => production or undefined
-const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
 });
