@@ -1,4 +1,4 @@
-const { Pool } = require("pg").Pool;
+const  Pool = require("pg").Pool;
 require("dotenv").config();
 
 // const pool = new Pool({
@@ -16,9 +16,6 @@ require("dotenv").config();
 //   password: 'process.env.PG_PASSWORD',
 //   port: process.env.PG_PORT,
 // });
-
-const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env_PG_DATABASE}`;
-
 // const devConfig = {
 //   user: process.env.PG_USER,
 //   host: process.env.PG_HOST,
@@ -27,7 +24,7 @@ const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD
 //   port: process.env.PG_PORT,
 // };
 
-console.log("lets see",process.env.HOST)
+const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env_PG_DATABASE}`;
 
 const proConfig = process.env.DATABASE_URL; //heroku addon
 
@@ -35,6 +32,9 @@ const pool = new Pool({
   connectionString:
     process.env.NODE_ENV === 'production' ? proConfig : devConfig,
 }); //heroku addon
+
+console.log("LETSSEE", process.env.DATABASE_URL)
+
 
 
 module.exports = pool;
