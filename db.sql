@@ -29,7 +29,7 @@ VALUES
 
 INSERT INTO oils
   (name, companytype, price, stock)
-VALUES
+VALUES (hey)
  
 
 -- ALTER TABLE oils ADD description varchar(300);
