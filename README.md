@@ -14,14 +14,3 @@ search by brand
 search bar
 
 
-
-## Project Schedule
-
-This schedule will be used to keep track of my progress/expectations.  
-
-|  Day | Feature to work on | Status
-|---|---| ---|
-|April 10-12 | Backend/Database| Complete
-|April 12 | Front end Design | Incomplete
-|April 12 | Styling? | Incomplete
-
