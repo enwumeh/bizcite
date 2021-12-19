@@ -27,15 +27,15 @@ require("dotenv").config();
 const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`;
 
 const proConfig = process.env.DATABASE_URL;
-console.log("ProConfig ====>", process.env.DATABASE_URL) //heroku addon
+console.log("ProConfig ====>", proConfig, devConfig) //heroku addon
 
 const pool = new Pool({
-    connectionString:
-    process.env.NODE_ENV === 'production' ? proConfig : devConfig,
+    connectionString: process.env.NODE_ENV === 'production' ? proConfig : devConfig,
+    // process.env.NODE_ENV === 'production' ? devConfig :  proConfig
   
 }); //heroku addon
 
-// console.log("LETS SEE", pool )
+console.log("LETS SEE", pool.options)
 
 
 
