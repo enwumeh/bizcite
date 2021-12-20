@@ -48,7 +48,7 @@ app.use(function (req, res, next) {
 app.get("/api/v1/oils", async (req, res) => {
   try {
     const oilsQuery = await db.query("SELECT * FROM oils");
-    // console.log(process.env)
+    console.log(oilsQuery)
     res.status(200).json({
       status: "success",
       data: {
@@ -147,6 +147,19 @@ app.get("/*", (req, res) => {
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
 });
-console.log("PATH HERE==>", process.env.PG_USER);
+
+// const funct = async () => {
+//   try {
+//     const oilsQuery = await db.query("SELECT * FROM oils");
+//     console.log("oilsQuery:", oilsQuery)
+//    }
+  
+//   catch(err) {
+//     console.log("Error:", err)
+//   }
+//  }
+//  funct()
+
+// console.log("PATH HERE==>", process.env.PG_USER);
 
 // exports.app = functions.https.onRequest(app);
