@@ -49,12 +49,12 @@ ALTER TABLE oils DROP COLUMN type;
 ALTER TABLE oils ADD type char(3);
 ALTER TABLE oils ADD url varchar(50);
 
-
-UPDATE oils SET url = 'https://i.imgur.com/cw4TYuI.jpg' WHERE id = 2;
-UPDATE oils SET url = 'https://i.imgur.com/Spq1cj3.jpg' WHERE id = 5;
 UPDATE oils SET url = 'https://i.imgur.com/z3wfmK0.jpg' WHERE id = 1;
+UPDATE oils SET url = 'https://i.imgur.com/cw4TYuI.jpg' WHERE id = 2;
 UPDATE oils SET url = 'https://i.imgur.com/z3wfmK0.jpg' WHERE id = 3;
 UPDATE oils SET url = 'https://i.imgur.com/z3wfmK0.jpg' WHERE id = 4;
+UPDATE oils SET url = 'https://i.imgur.com/Spq1cj3.jpg' WHERE id = 5;
+UPDATE oils SET url = 'https://i.imgur.com/z3wfmK0.jpg' WHERE id = 6;
 UPDATE oils SET url = 'https://i.imgur.com/z3wfmK0.jpg' WHERE id = 7;
 UPDATE oils SET name = 'Jimmy Choo' WHERE id = 5;
 
