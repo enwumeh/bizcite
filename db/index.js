@@ -23,10 +23,10 @@ require("dotenv").config();
 //   password: process.env.PG_PASSWORD,
 //   port: process.env.PG_PORT,
 // };
-let ssl = null;
-if (process.env.NODE_ENV === 'development') {
-   ssl = {rejectUnauthorized: false};
-}
+// let ssl = null;
+// if (process.env.NODE_ENV === 'development') {
+//    ssl = {rejectUnauthorized: false};
+// }
 
 const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`;
 
@@ -36,8 +36,8 @@ console.log("ProConfig ====>", proConfig, devConfig) //heroku addon
 
 const pool = new Pool({
   connectionString: process.env.NODE_ENV === 'production' ? proConfig : devConfig,
-  // ssl: { rejectUnauthorized: false }
-  ssl: ssl
+  ssl: { rejectUnauthorized: false }
+  // ssl: ssl
 
 
     // process.env.NODE_ENV === 'production' ? devConfig :  proConfig
