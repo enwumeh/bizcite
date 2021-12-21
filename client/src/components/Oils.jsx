@@ -8,17 +8,17 @@ import { Link } from "react-router-dom";
 const Oils = () => {
   const { oils, setOils } = useContext(OilsContext);
 
-  useEffect(() => {
-    const localOils = Number(localStorage.getItem("oils") || 0)
-    setOils(localOils)
-  }, [])
+  // React.useEffect(() => {
+  //   const localOils = Number(localStorage.getItem("oils") || 0)
+  //   setOils(localOils)
+  // }, [])
 
-  useEffect(() => {
+  React.useEffect(() => {
     const getData = async () => {
       try {
         const response = await FindOils.get("/");
         setOils(response.data.data.oils);
-        localStorage.setItem("oils",response.data.data.oils)
+        // localStorage.setItem("oils",response.data.data.oils)
         console.log("response should be here", oils);
         // window.location = '/';
       } catch (error) {
