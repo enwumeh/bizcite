@@ -36,7 +36,9 @@ console.log("ProConfig ====>", proConfig, devConfig) //heroku addon
 
 const pool = new Pool({
   connectionString: process.env.NODE_ENV === 'production' ? proConfig : devConfig,
-  ssl: { rejectUnauthorized: false }
+  // ssl: { rejectUnauthorized: false }
+  ssl: false 
+
   // ssl: ssl
 
 
@@ -44,8 +46,19 @@ const pool = new Pool({
   
 }); //heroku addon
 
-console.log("LETS SEE", pool.options)
+// console.log("LETS SEE", pool.query('select * from oils'))
 
 
-
+const getUserById = () => {
+  // const id = parseInt(request.params.id)
+ 
+  pool.query('SELECT * FROM oils',(error, results) => {
+   if (error) {
+    throw error
+   }
+   console.log("GRRRRRRRR",results)
+  })
+}
+getUserById()
+ 
 module.exports = pool;

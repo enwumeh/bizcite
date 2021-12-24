@@ -5,13 +5,26 @@ import { useParams } from "react-router-dom";
 import { OilsContext } from "../context/OilsContext";
 
 const Oildetails = () => {
-  const { oils } = useContext(OilsContext);
+  const { oils, setOils } = useContext(OilsContext);
 
   const params = useParams();
+  // console.log("oils11111:", oils)
   const oilMatch = oils.find((oil) => oil.id == params.id);
-  // setOils(oilMatch);
+  // console.log("oil???", oilMatch);
 
-  console.log("oil:", oils);
+
+  React.useEffect(() => {
+    let oilz = localStorage.getItem('oils');
+    // console.log("response should be here", oilz);
+    // setOils(oilz)
+  })
+
+  React.useEffect(() => {
+    // console.log("response should be here", oils);
+    localStorage.setItem('oils', JSON.stringify(oilMatch));
+  });
+
+
 
   return oilMatch ? (
     <Layout>
