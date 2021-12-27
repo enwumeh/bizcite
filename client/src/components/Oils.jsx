@@ -19,7 +19,6 @@ const Oils = () => {
 
   // const history = createBrowserHistory();
 
-
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -29,7 +28,6 @@ const Oils = () => {
           window.localStorage.setItem('oils', JSON.stringify(oils));
           setOils({ oils: data })
           // console.log("DATA", data)
-
        }
         // localStorage.setItem("oils", response.data.data.oils
         // localStorage.setItem("oils", response.data.data.oils)
