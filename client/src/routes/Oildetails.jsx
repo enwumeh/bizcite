@@ -14,14 +14,15 @@ const Oildetails = () => {
 
 
   React.useEffect(() => {
-    let oilz = localStorage.getItem('oils');
+    let oilz = localStorage.getItem('oils!');
+    // localStorage.getItem('oils!')
     // console.log("response should be here", oilz);
     // setOils(oilz)
   })
 
   React.useEffect(() => {
     // console.log("response should be here", oils);
-    localStorage.setItem('oils', JSON.stringify(oilMatch));
+    localStorage.setItem('oils!',oilMatch);
   });
 
 
@@ -29,7 +30,9 @@ const Oildetails = () => {
   return oilMatch ? (
     <Layout>
       <div className="details-main">
+        {/* <div id="detail-title">{oilMatch.name}</div> */}
         <div id="detail-title">{oilMatch.name}</div>
+
         <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
         <div id="detail-blerb"> {oilMatch.description}</div>
       </div>

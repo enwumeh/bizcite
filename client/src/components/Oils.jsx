@@ -25,13 +25,11 @@ const Oils = () => {
         // const response = await FindOils.get("/");
         const data = JSON.parse(window.localStorage.getItem('oils'))
         if (data) {
-          window.localStorage.setItem('oils', JSON.stringify(oils));
-          setOils({ oils: data })
-          // console.log("DATA", data)
+          console.log("DATA", data)
+          // window.localStorage.setItem('oils', JSON.stringify(oils));
+          setOils(data)
+          //
        }
-        // localStorage.setItem("oils", response.data.data.oils
-        // localStorage.setItem("oils", response.data.data.oils)
-        // const localOils = localStorage.getItem("oils") || 0
         // window.location = '/';
       } catch (error) {
         console.log("whats wrong", error);
@@ -43,6 +41,8 @@ const Oils = () => {
 
   React.useEffect(() => {
     window.localStorage.setItem('oils', JSON.stringify(oils));
+    // window.localStorage.setItem('oils', 333)
+
   },[oils]);
 
  
