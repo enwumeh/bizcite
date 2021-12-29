@@ -139,10 +139,10 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
     console.log("NAWAOOOOO", err);
   }
 });
-app.get("/*", (req, res) => {
-  // res.sendFile(path.join(__dirname, "client/build/index.html"));
-  res.send('sorry')
-});
+// app.get("/*", (req, res) => {
+//   // res.sendFile(path.join(__dirname, "client/build/index.html"));
+//   res.send('sorry')
+// });
 //process.env.NODE_ENV => production or undefined
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
