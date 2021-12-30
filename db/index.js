@@ -56,7 +56,7 @@ const getUserById = () => {
    if (error) {
     throw error
    }
-   console.log("GRRRRRRRR",results)
+   console.log("Results:",results)
   })
 }
 getUserById()
