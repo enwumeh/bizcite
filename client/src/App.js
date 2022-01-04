@@ -30,7 +30,7 @@ const App = () => {
   return (
     <OilsContextProvider>
       <div className="container">
-        <Router>
+        {/* <Router> */}
           <Routes>
             <Route exact path="/" element={<LandingPage/>}/>
             {/* <LandingPage /> */}
@@ -39,7 +39,7 @@ const App = () => {
             <Route exact path="/oils" element={<Oils />} />
             <Route exact path="/oils/:id" element={<Oildetails />}/>
           </Routes>
-        </Router>
+        {/* </Router> */}
       </div>
     </OilsContextProvider>
   );
