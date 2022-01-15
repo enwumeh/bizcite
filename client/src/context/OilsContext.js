@@ -17,7 +17,6 @@ export const OilsContextProvider = props => {
 
         // const data = JSON.parse(window.localStorage.getItem('oils'))
         // if (data) {
-        //   console.log("DATA", data)
           // window.localStorage.setItem('oils', JSON.stringify(oils));
           // setOils(data)
           //
@@ -29,7 +28,7 @@ export const OilsContextProvider = props => {
       } 
       getData()
     },
-  [oils]);
+  );
 
 
   return (

@@ -3,53 +3,83 @@ import "../styles/scss/oil-details.scss";
 import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
 import { OilsContext } from "../context/OilsContext";
+import FindOils from "../APIs/FindOils";
 
 const Oildetails = () => {
   const { oils, setOils } = useContext(OilsContext);
   const params = useParams();
-  const oilMatch = oils.find((oil) => oil.id == params.id);
 
+  const oilMatch = oils.find((oil) => oil.id == params.id);
 
   React.useEffect(() => {
     const getData = async () => {
-
       try {
-        const response = await FindOils.get("/");
         // const response = await FindOils.get("/");
-        setOils(response.data.data.oils);
-     
-
-        // const data = JSON.parse(window.localStorage.getItem('oils'))
-        // if (data) {
-        //   console.log("DATA", data)
-        // window.localStorage.setItem('oils', JSON.stringify(oils));
-        // setOils(data)
-        //
-      }
-      catch (error) {
+        const data = JSON.parse(window.localStorage.getItem('oils'))
+        if (data) {
+          console.log("DATERRRRRR", data)
+          // window.localStorage.setItem('oils', JSON.stringify(oils));
+          setOils(data)
+          //
+       }
+        // window.location = '/';
+      } catch (error) {
         console.log("whats wrong", error);
       }
-    }
-    getData()
-  } , [oils])
+    };
+    getData();
+  }, []);
+  // React.useEffect(() => {
+  //   const getDeetsData = async () => {
+
+  //     try {
+  //       const response = await FindOils.get("/");
+  //       // const response = await FindOils.get("/");
+  //       setOils(response.data.data.oils);
+  //       console.log("DATXllXXXA", oils)
+     
+
+  //       // const data = JSON.parse(window.localStorage.getItem('oils'))
+  //       // if (data) {
+  //       //   console.log("DATA", data)
+  //       // window.localStorage.setItem('oils', JSON.stringify(oils));
+  //       // setOils(data)
+  //       //
+  //     }
+  //     catch (error) {
+  //       console.log("whats wrong", error);
+  //     }
+  //   }
+  //   getDeetsData()
+  // },[])
+  // const funct = () => {
+    // console.log(oilMatch)
+  // }
+
+  React.useEffect(() => {
+    // return  console.log("DATXllXXXA", oils)
+    // funct()
+    console.log("DATXllXXXA", oilMatch)
+    // console.log("response should be here", oils);
+    // anythine a variable inside the depend, array changes, the usezeffect code gets triggered   
+  },[]);
+
 
   // React.useEffect(() => {
-  //   // console.log("response should be here", oils);
-  //   localStorage.setItem('oils!',oilMatch);
-  // });
-
+  //   setOils(oilMatch)  
+  // },[]);
   
 
 
   return oilMatch ? (
     <Layout>
-      <div className="details-main">
-        {/* <div id="detail-title">{oilMatch.name}</div> */}
+      {/* <div>{oils.name}</div> */}
+       <div className="details-main"> 
         <div id="detail-title">{oilMatch.name}</div>
 
         <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
-        <div id="detail-blerb"> {oilMatch.description}</div>
-      </div>
+        <div id="detail-blerb"> {oilMatch.description}</div> 
+       </div> 
     </Layout>
   ) : (
     <div>srry no oil</div>

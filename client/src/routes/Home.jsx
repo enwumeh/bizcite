@@ -20,7 +20,7 @@ const Home = () => {
       }
     };
     getData();
-  }, [oils]);
+  }, []);
 
   const popOils = oils.filter(
     (oil) =>
