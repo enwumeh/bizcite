@@ -6,23 +6,35 @@ import { OilsContext } from "../context/OilsContext";
 
 const Oildetails = () => {
   const { oils, setOils } = useContext(OilsContext);
-console.log("oils:",oils, OilsContext)
   const params = useParams();
   const oilMatch = oils.find((oil) => oil.id == params.id);
 
 
   React.useEffect(() => {
-    let oilz = localStorage.getItem('oils!');
-    // localStorage.getItem('oils!')
-    // console.log("response should be here", oilz);
-    // setOils(oilz)
-  })
+    try {
+      const response = await FindOils.get("/");
+      // const response = await FindOils.get("/");
+      setOils(response.data.data.oils);
+     
 
-  React.useEffect(() => {
-    // console.log("response should be here", oils);
-    localStorage.setItem('oils!',oilMatch);
-  });
+      // const data = JSON.parse(window.localStorage.getItem('oils'))
+      // if (data) {
+      //   console.log("DATA", data)
+        // window.localStorage.setItem('oils', JSON.stringify(oils));
+        // setOils(data)
+        //
+    }
+    catch (error) {
+      console.log("whats wrong", error);
+    }
+  }, [oils])
 
+  // React.useEffect(() => {
+  //   // console.log("response should be here", oils);
+  //   localStorage.setItem('oils!',oilMatch);
+  // });
+
+  
 
 
   return oilMatch ? (
