@@ -136,7 +136,7 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
       data: DELETED
     });
   } catch (err) {
-    console.log("NAWAOOOOO", err);
+    console.log("Error:", err);
   }
 });
 // app.get("/*", (req, res) => {

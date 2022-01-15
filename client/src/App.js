@@ -30,16 +30,13 @@ const App = () => {
   return (
     <OilsContextProvider>
       <div className="container">
-        {/* <Router> */}
           <Routes>
             <Route exact path="/" element={<LandingPage/>}/>
-            {/* <LandingPage /> */}
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/about" element={<About />}/>
             <Route exact path="/oils" element={<Oils />} />
             <Route exact path="/oils/:id" element={<Oildetails />}/>
           </Routes>
-        {/* </Router> */}
       </div>
     </OilsContextProvider>
   );

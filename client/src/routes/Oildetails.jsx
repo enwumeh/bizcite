@@ -6,11 +6,9 @@ import { OilsContext } from "../context/OilsContext";
 
 const Oildetails = () => {
   const { oils, setOils } = useContext(OilsContext);
-
+console.log("oils:",oils, OilsContext)
   const params = useParams();
-  // console.log("oils11111:", oils)
   const oilMatch = oils.find((oil) => oil.id == params.id);
-  // console.log("oil???", oilMatch);
 
 
   React.useEffect(() => {
