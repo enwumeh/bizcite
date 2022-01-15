@@ -11,23 +11,27 @@ const Oildetails = () => {
 
 
   React.useEffect(() => {
-    try {
-      const response = await FindOils.get("/");
-      // const response = await FindOils.get("/");
-      setOils(response.data.data.oils);
+    const getData = async () => {
+
+      try {
+        const response = await FindOils.get("/");
+        // const response = await FindOils.get("/");
+        setOils(response.data.data.oils);
      
 
-      // const data = JSON.parse(window.localStorage.getItem('oils'))
-      // if (data) {
-      //   console.log("DATA", data)
+        // const data = JSON.parse(window.localStorage.getItem('oils'))
+        // if (data) {
+        //   console.log("DATA", data)
         // window.localStorage.setItem('oils', JSON.stringify(oils));
         // setOils(data)
         //
+      }
+      catch (error) {
+        console.log("whats wrong", error);
+      }
     }
-    catch (error) {
-      console.log("whats wrong", error);
-    }
-  }, [oils])
+    getData()
+  } , [oils])
 
   // React.useEffect(() => {
   //   // console.log("response should be here", oils);
