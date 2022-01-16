@@ -8,19 +8,20 @@ import Layout from "../components/Layout";
 
 const Home = () => {
   const { oils, setOils } = useContext(OilsContext);
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await FindOils.get("/");
-        setOils(response.data.data.oils);
-        console.log("response should be here", oils);
-      } catch (error) {
-        console.log("whats wrong", error);
-      }
-    };
-    getData();
-  }, []);
+  // console.log("response one:", oils);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       console.log("response one:", oils);
+  //       const response = await FindOils.get("/");
+  //       setOils(response.data.data.oils);
+  //       console.log("response should be here", oils);
+  //     } catch (error) {
+  //       console.log("whats wrong", error);
+  //     }
+  //   };
+  //   getData();
+  // }, []);
 
   const popOils = oils.filter(
     (oil) =>

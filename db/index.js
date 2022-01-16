@@ -31,7 +31,10 @@ require("dotenv").config();
 const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`;
 
 const proConfig = process.env.DATABASE_URL;
-console.log("ProConfig ====>", proConfig, devConfig) //heroku addon
+console.log("ProConfig ====>", proConfig) //heroku addon
+console.log("DevConfig ====>", devConfig) //heroku addon
+
+
 
 
 const pool = new Pool({
@@ -45,20 +48,22 @@ const pool = new Pool({
     // process.env.NODE_ENV === 'production' ? devConfig :  proConfig
   
 }); //heroku addon
+console.log("CONNECTEDSTRING ====>", pool) //heroku addon
+
 
 // console.log("LETS SEE", pool.query('select * from oils'))
 
 
-const getUserById = () => {
-  // const id = parseInt(request.params.id)
+// const getUserById = () => {
+//   // const id = parseInt(request.params.id)
  
-  pool.query('SELECT * FROM oils',(error, results) => {
-   if (error) {
-    throw error
-   }
-   console.log("Results!!:",results)
-  })
-}
-getUserById()
+//   pool.query('SELECT * FROM oils',(error, results) => {
+//    if (error) {
+//     throw error
+//    }
+//    console.log("Results!!:",results)
+//   })
+// }
+// getUserById()
  
 module.exports = pool;

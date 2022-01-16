@@ -11,24 +11,24 @@ const Oildetails = () => {
 
   const oilMatch = oils.find((oil) => oil.id == params.id);
 
-  React.useEffect(() => {
-    const getData = async () => {
-      try {
-        // const response = await FindOils.get("/");
-        const data = JSON.parse(window.localStorage.getItem('oils'))
-        if (data) {
-          console.log("DATERRRRRR", data)
-          // window.localStorage.setItem('oils', JSON.stringify(oils));
-          setOils(data)
-          //
-       }
-        // window.location = '/';
-      } catch (error) {
-        console.log("whats wrong", error);
-      }
-    };
-    getData();
-  }, []);
+  // React.useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       // const response = await FindOils.get("/");
+  //       const data = JSON.parse(window.localStorage.getItem('oils'))
+  //       if (data) {
+  //         console.log("DATERRRRRR", data)
+  //         // window.localStorage.setItem('oils', JSON.stringify(oils));
+  //         setOils(data)
+  //         //
+  //      }
+  //       // window.location = '/';
+  //     } catch (error) {
+  //       console.log("whats wrong", error);
+  //     }
+  //   };
+  //   getData();
+  // }, []);
   // React.useEffect(() => {
   //   const getDeetsData = async () => {
 
@@ -72,17 +72,24 @@ const Oildetails = () => {
 
 
   return oilMatch ? (
+
     <Layout>
       {/* <div>{oils.name}</div> */}
        <div className="details-main"> 
         <div id="detail-title">{oilMatch.name}</div>
-
         <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
         <div id="detail-blerb"> {oilMatch.description}</div> 
        </div> 
-    </Layout>
+      </Layout>
   ) : (
-    <div>srry no oil</div>
+    <Layout>
+     {/* <div className="details-main"> 
+      <div id="detail-title">{oilMatch.name}</div>
+      <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
+      <div id="detail-blerb"> {oilMatch.description}</div> 
+     </div>  */}
+    </Layout>
+    // <div>srry no oil</div>
   );
 };
 
