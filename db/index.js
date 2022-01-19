@@ -48,7 +48,7 @@ const pool = new Pool({
     // process.env.NODE_ENV === 'production' ? devConfig :  proConfig
   
 }); //heroku addon
-console.log("CONNECTEDSTRING ====>", pool) //heroku addon
+// console.log("CONNECTEDSTRING ====>", pool) //heroku addon
 
 
 // console.log("LETS SEE", pool.query('select * from oils'))

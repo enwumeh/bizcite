@@ -48,7 +48,7 @@ app.use(function (req, res, next) {
 app.get("/api/v1/oils", async (req, res) => {
   try {
     const oilsQuery = await db.query("SELECT * FROM oils");
-    console.log(oilsQuery)
+    // console.log(oilsQuery)
     res.status(200).json({
       status: "success",
       data: {
@@ -67,7 +67,7 @@ app.get("/api/v1/oils/:id", async (req, res) => {
     const oilQuery = await db.query("SELECT * FROM oils where id = $1", [
       req.params.id
     ]);
-    console.log(oilQuery);
+    console.log("GRAHHH",oilQuery);
     res.status(200).json({
       status: "success",
       data: {
