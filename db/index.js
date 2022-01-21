@@ -39,7 +39,7 @@ console.log("DevConfig ====>", devConfig) //heroku addon
 
 const pool = new Pool({
   connectionString: process.env.NODE_ENV === 'production' ? proConfig : devConfig,
-  ssl: { rejectUnauthorized: false }
+  // ssl: { rejectUnauthorized: false }
   // ssl: false 
 
   // ssl: ssl

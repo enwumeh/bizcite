@@ -10,7 +10,6 @@ const Oildetails = () => {
   const params = useParams();
 
   const oilMatch = oils.find((oil) => oil.id == params.id);
-
   // React.useEffect(() => {
   //   const getData = async () => {
   //     try {
@@ -60,17 +59,14 @@ const Oildetails = () => {
   //   // funct()
   //   console.log("DATXllXXXA", oilMatch)
   //   // console.log("response should be here", oils);
-  //   // anythine a variable inside the depend, array changes, the usezeffect code gets triggered   
+  //   // anythine a variable inside the depend, array changes, the usezeffect code gets triggered
   // },[]);
 
 
-  React.useEffect(() => {
-    // setOils(oilMatch)  
-  },[]);
-  
-
 
   return oilMatch ? (
+    // return  (
+
 
     <Layout>
       {/* <div>{oils.name}</div> */}
@@ -78,9 +74,12 @@ const Oildetails = () => {
         <div id="detail-title">{oilMatch.name}</div>
         <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
         <div id="detail-blerb"> {oilMatch.description}</div> 
+
        </div> 
       </Layout>
-  ) : (
+    
+  ) : ( 
+    
     <Layout>
     
      {/* <div className="details-main"> 
@@ -88,9 +87,9 @@ const Oildetails = () => {
       <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
       <div id="detail-blerb"> {oilMatch.description}</div> 
      </div>  */}
-    </Layout>
+     </Layout>
     // <div>srry no oil</div>
-  );
+  )
 };
 
 export default Oildetails;

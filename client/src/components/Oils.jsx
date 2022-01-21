@@ -19,7 +19,7 @@ const Oils = () => {
 
   // const history = createBrowserHistory();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const getData = async () => {
       try {
         // const response = await FindOils.get("/");

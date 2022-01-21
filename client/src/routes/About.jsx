@@ -36,7 +36,13 @@ const About = () => {
             {" "}
             here
           </a>
-          )<button id="seeall-button1">See all fragrances!</button>
+
+
+          )
+
+          <Link to={`/oils`}>
+            <button id="seeall-button1">See all fragrances!</button>
+           </Link>
         </p>
         <div id="me-div">
           <img id="me-photo" src={photo} alt="me" />

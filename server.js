@@ -16,10 +16,11 @@ app.use(express.json());
 
 // app.use(express.static(path.join(__dirname, "client/build")));
 if (process.env.NODE_ENV === "production") {
-  //serve static content
+  
   app.use(express.static(path.join(__dirname, "client/build")));
+  console.log(path.join(__dirname, "client/build"));
+
 }
-// console.log(path.join(__dirname, "client/build"));
 
 //middleware
 // app.use(function (_req, res, next) {
@@ -72,7 +73,10 @@ app.get("/api/v1/oils/:id", async (req, res) => {
       status: "success",
       data: {
         oil: oilQuery.rows
+        // oil: "jeisdfohjenlkp"
+
       }
+      
     });
   } catch (err) {
     console.log(err);
@@ -163,3 +167,6 @@ app.listen(port, () => {
 // console.log("PATH HERE==>", process.env.PG_USER);
 
 // exports.app = functions.https.onRequest(app);
+
+
+  // makes it much easier to shorten url. helps with production: in production, proxy will be ignored
