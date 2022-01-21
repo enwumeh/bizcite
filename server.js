@@ -143,12 +143,8 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
     console.log("Error:", err);
   }
 });
-// app.get("/*", (req, res) => {
-//   // res.sendFile(path.join(__dirname, "client/build/index.html"));
-//   res.send('sorry')
-// });
-//process.env.NODE_ENV => production or undefined
 
+// if theres not a defined routes, go to build folder
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build'));
 });
