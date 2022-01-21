@@ -68,7 +68,7 @@ app.get("/api/v1/oils/:id", async (req, res) => {
     const oilQuery = await db.query("SELECT * FROM oils where id = $1", [
       req.params.id
     ]);
-    console.log("GRAHHH",oilQuery);
+    console.log(oilQuery);
     res.status(200).json({
       status: "success",
       data: {
@@ -148,9 +148,17 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
 //   res.send('sorry')
 // });
 //process.env.NODE_ENV => production or undefined
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build'));
+});
+
+
 app.listen(port, () => {
   console.log(`server is live! listening on port ${port}`);
 });
+
+
 
 // const funct = async () => {
 //   try {

@@ -43,8 +43,7 @@
   "main": "index.js",
   "author": "Emma Nwumeh",
   "license": "ISC",
-  "proxy": "http://localhost:3002",
-  "secure":false
+  "proxy": "http://localhost:3002"
 }
 
 
