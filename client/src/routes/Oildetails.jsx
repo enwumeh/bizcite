@@ -10,6 +10,35 @@ const Oildetails = () => {
   const params = useParams();
 
   const oilMatch = oils.find((oil) => oil.id == params.id);
+
+  
+return oilMatch ? (
+  // return  (
+
+
+  <Layout>
+    {/* <div>{oils.name}</div> */}
+     <div className="details-main"> 
+      <div id="detail-title">{oilMatch.name}</div>
+      <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
+      <div id="detail-blerb"> {oilMatch.description}</div> 
+
+     </div> 
+    </Layout>
+  
+) : ( 
+  
+  <Layout>
+  
+   {/* <div className="details-main"> 
+    <div id="detail-title">{oilMatch.name}</div>
+    <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
+    <div id="detail-blerb"> {oilMatch.description}</div> 
+   </div>  */}
+   </Layout>
+  // <div>srry no oil</div>
+)
+  
   // React.useEffect(() => {
   //   const getData = async () => {
   //     try {
@@ -64,32 +93,7 @@ const Oildetails = () => {
 
 
 
-  return oilMatch ? (
-    // return  (
-
-
-    <Layout>
-      {/* <div>{oils.name}</div> */}
-       <div className="details-main"> 
-        <div id="detail-title">{oilMatch.name}</div>
-        <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
-        <div id="detail-blerb"> {oilMatch.description}</div> 
-
-       </div> 
-      </Layout>
-    
-  ) : ( 
-    
-    <Layout>
-    
-     {/* <div className="details-main"> 
-      <div id="detail-title">{oilMatch.name}</div>
-      <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
-      <div id="detail-blerb"> {oilMatch.description}</div> 
-     </div>  */}
-     </Layout>
-    // <div>srry no oil</div>
-  )
+  
 };
 
 export default Oildetails;

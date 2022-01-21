@@ -8,17 +8,6 @@ import { Link } from "react-router-dom";
 const Oils = () => {
   const { oils, setOils } = useContext(OilsContext);
 
- 
-// cookies/localandsessionstorage
-  // localStorage.setItem('name', 'Bob')
-  // localStorage.removeItem('name')
-  // sessionStorage.setItem('name', 'John')
-  // sessionStorage.setItem('name', 'Bob')
-  // document.cookie = 'name=Kyle; expires=' + new Date(9999, 0, 1).toUTCString()
-  // document.cookie = 'lastName=Smith; expires=' + new Date(9999, 0, 1).toUTCString()
-
-  // const history = createBrowserHistory();
-
   useEffect(() => {
     const getData = async () => {
       try {
