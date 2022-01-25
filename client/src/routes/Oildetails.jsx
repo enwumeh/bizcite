@@ -3,41 +3,65 @@ import "../styles/scss/oil-details.scss";
 import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
 import { OilsContext } from "../context/OilsContext";
-// import FindOils from "../APIs/FindOils";
+import FindOils from "../APIs/FindOils";
 
 const Oildetails = () => {
-  const { oils } = useContext(OilsContext);
-  const params = useParams();
+  const { oils, setOils } = useContext(OilsContext);
+  let params = useParams();
 
-  const oilMatch = oils.find((oil) => oil.id == params.id);
+
+// retrieve the oil that mathces the id in the params 
+  // const oilMatch = oils.find((oil) => oil.id == params.id);
+
+  React.useEffect(() => { 
+    const getData = async () => {
+      try {
+        const response = await FindOils.get(`/${params.id}`);
+        console.log(response.data.data.oil)
+        // const response = await FindOils.get("/");
+        setOils(response.data.data.oil[0]);
+       
+
+        // const data = JSON.parse(window.localStorage.getItem('oils'))
+        // if (data) {
+          // window.localStorage.setItem('oils', JSON.stringify(oils));
+          // setOils(data)
+          //
+      }
+      catch (error) {
+        console.log("whats wrong", error);
+      }
+        // window.location = '/';
+      } 
+      getData()
+    }, [setOils,params.id ],
+  );
+
+
+
 
   
-return oilMatch ? (
+  // return (
+  //   <div>{oils.name}</div>
+  // )
+
+  
+return  (
   // return  (
 
 
   <Layout>
     {/* <div>{oils.name}</div> */}
      <div className="details-main"> 
-      <div id="detail-title">{oilMatch.name}</div>
-      <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
-      <div id="detail-blerb"> {oilMatch.description}</div> 
+      <div key={oils.id} id="detail-title">{oils.name}</div>
+      <img id="detail-pic" src={oils.url} alt="oil pic"></img>
+      <div id="detail-blerb"> {oils.description}</div> 
+
 
      </div> 
     </Layout>
   
-) : ( 
-  
-  <Layout>
-  
-   {/* <div className="details-main"> 
-    <div id="detail-title">{oilMatch.name}</div>
-    <img id="detail-pic" src={oilMatch.url} alt="oil pic"></img>
-    <div id="detail-blerb"> {oilMatch.description}</div> 
-   </div>  */}
-   </Layout>
-  // <div>srry no oil</div>
-)
+) 
   
   // React.useEffect(() => {
   //   const getData = async () => {
