@@ -9,7 +9,7 @@ const Oildetails = () => {
   const { oils } = useContext(OilsContext);
   const params = useParams();
 
-  const oilMatch = oils.find((oil) => oil.id === params.id);
+  const oilMatch = oils.find((oil) => oil.id == params.id);
 
   
 return oilMatch ? (

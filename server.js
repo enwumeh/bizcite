@@ -146,7 +146,7 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
 
 // if theres not a defined routes, go to build folder
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build'));
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 
