@@ -9,17 +9,19 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "server": "nodemon server.js -- ignore client",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently -k \"npm run server\" \"npm run client\""
   },
   "author": "Emmanuela Nwumeh",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
+    "nodemon": "^2.0.15",
     "openssl": "^1.1.0",
     "pg": "^8.7.1",
     "react-router-dom": "^6.2.1",
