@@ -27,7 +27,7 @@ export const OilsContextProvider = props => {
         // window.location = '/';
       } 
       getData()
-    },
+    }, [],
   );
 
 
