@@ -3,13 +3,13 @@ import "../styles/scss/oil-details.scss";
 import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
 import { OilsContext } from "../context/OilsContext";
-import FindOils from "../APIs/FindOils";
+// import FindOils from "../APIs/FindOils";
 
 const Oildetails = () => {
-  const { oils, setOils } = useContext(OilsContext);
+  const { oils } = useContext(OilsContext);
   const params = useParams();
 
-  const oilMatch = oils.find((oil) => oil.id == params.id);
+  const oilMatch = oils.find((oil) => oil.id === params.id);
 
   
 return oilMatch ? (

@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import FindOils from "../APIs/FindOils";
+// import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
 import "../styles/scss/oils.scss";
 import Layout from "../components/Layout";
@@ -25,7 +25,7 @@ const Oils = () => {
       }
     };
     getData();
-  }, []);
+  }, [setOils]);
 
 
   React.useEffect(() => {

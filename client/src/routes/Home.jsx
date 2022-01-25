@@ -1,13 +1,13 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import "../styles/scss/home.scss";
-import FindOils from "../APIs/FindOils";
+// import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
 import { Link } from "react-router-dom";
 import flowers from "../images/flowers.jpeg";
 import Layout from "../components/Layout";
 
 const Home = () => {
-  const { oils, setOils } = useContext(OilsContext);
+  const { oils } = useContext(OilsContext);
 
   const popOils = oils.filter(
     (oil) =>
