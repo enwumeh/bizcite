@@ -88,7 +88,7 @@ app.post("/api/v1/oils", async (req, res) => {
   try {
     const oilQuery = await db.query(
       "INSERT INTO oils (name, companytype, price, stock) VALUES ($1, $2, $3, $4) returning *",
-      [req.body.name, req.body.companytype, req.body.price, req.body.stock]
+      [req.body.name, req.body.companytype, req.body.price, req.body.stock, req.body.url]
     );
     console.log(oilQuery);
     res.status(201).json({

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../styles/scss/oil-details.scss";
 import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
@@ -6,20 +6,22 @@ import { OilsContext } from "../context/OilsContext";
 import FindOils from "../APIs/FindOils";
 
 const Oildetails = () => {
-  const { oils, setOils } = useContext(OilsContext);
+  // const { oils, setOils } = useContext(OilsContext);
   let params = useParams();
-
+const [oil, setOil] = useState([])
 
 // retrieve the oil that mathces the id in the params 
   // const oilMatch = oils.find((oil) => oil.id == params.id);
 
   React.useEffect(() => { 
-    const getData = async () => {
+    // const getData = async () => {
       try {
-        const response = await FindOils.get(`/${params.id}`);
-        console.log(response.data.data.oil)
+        const response =  FindOils.get(`/${params.id}`);
+        let oilFrmParam = response.data.data.oil[0]
+        console.log("oilFrmParamL",oilFrmParam)
         // const response = await FindOils.get("/");
-        setOils(response.data.data.oil[0]);
+        setOil(oilFrmParam);
+        console.log("oil:", oil)
        
 
         // const data = JSON.parse(window.localStorage.getItem('oils'))
@@ -32,9 +34,9 @@ const Oildetails = () => {
         console.log("whats wrong", error);
       }
         // window.location = '/';
-      } 
-      getData()
-    }, [setOils,params.id ],
+      // } 
+      // getDat a()
+    }, [setOil,params.id ],
   );
 
 
@@ -53,9 +55,9 @@ return  (
   <Layout>
     {/* <div>{oils.name}</div> */}
      <div className="details-main"> 
-      <div key={oils.id} id="detail-title">{oils.name}</div>
-      <img id="detail-pic" src={oils.url} alt="oil pic"></img>
-      <div id="detail-blerb"> {oils.description}</div> 
+      <div key={oil.id} id="detail-title">{oil.name}</div>
+      <img id="detail-pic" src={oil.url} alt="oil pic"></img>
+      <div id="detail-blerb"> {oil.description}</div> 
 
 
      </div> 
