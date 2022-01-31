@@ -18,7 +18,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   
   app.use(express.static(path.join(__dirname, "client/build")));
-  console.log(path.join(__dirname, "client/build"));
+  // console.log(path.join(__dirname, "client/build"));
 
 }
 
@@ -88,7 +88,7 @@ app.post("/api/v1/oils", async (req, res) => {
   try {
     const oilQuery = await db.query(
       "INSERT INTO oils (name, companytype, price, stock) VALUES ($1, $2, $3, $4) returning *",
-      [req.body.name, req.body.companytype, req.body.price, req.body.stock, req.body.url]
+      [req.body.name, req.body.companytype, req.body.price, req.body.stock]
     );
     console.log(oilQuery);
     res.status(201).json({
@@ -146,7 +146,9 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
 
 // if theres not a defined routes, go to build folder
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+  res.send("shfgoishdfoigs")
+  // console.log("theres no path with that name")
+  res.sendFile(path.join(__dirname,'client/build/','index.html'));
 });
 
 

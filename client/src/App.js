@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Oildetails from "./routes/Oildetails";
 import About from "./routes/About";
 import Oils from "./components/Oils";
+import PageNotFound from "./components/PageNotFound";
+
 import { OilsContextProvider } from "./context/OilsContext";
 import LandingPage from "./routes/LandingPage";
 
@@ -35,7 +37,9 @@ const App = () => {
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/about" element={<About />}/>
             <Route exact path="/oils" element={<Oils />} />
-            <Route exact path="/oils/:id" element={<Oildetails />}/>
+          <Route exact path="/oils/:id" element={<Oildetails />} />
+          <Route path="*" element={<PageNotFound />} />
+
           </Routes>
       </div>
     </OilsContextProvider>
