@@ -34,8 +34,6 @@ VALUES (hey)
 
 -- ALTER TABLE oils ADD description varchar(300);
 
-
-
 UPDATE oils SET description = 'an alluring, smooth and warm fragrance that exudes femininity. This one will turn heads. Smells like a chocolate milkshake in the best way. Notes include almond, vanilla, coffee, tonka bean, and cocoa with bergamot and jasmine.' WHERE id = 1;
 UPDATE oils SET description = 'Sweet and Sophisticated, this one is like luxurious cotton candy with  hint of woody spiciness. Very addictive' WHERE id = 2;
 UPDATE oils SET description = 'Clean and girly. Roses on a warm spring day. Smells like a pretty, flowery baby powder' WHERE id = 3;
