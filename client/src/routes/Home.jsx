@@ -5,6 +5,8 @@ import { OilsContext } from "../context/OilsContext";
 import { Link } from "react-router-dom";
 import flowers from "../images/flowers.jpeg";
 import Layout from "../components/Layout";
+// import Blog from "../components/Blog";
+
 
 const Home = () => {
   const { oils } = useContext(OilsContext);
@@ -17,6 +19,8 @@ const Home = () => {
   );
 
   return oils ? (
+    <>
+      {/* <Blog/> */}
     <Layout>
       <div className="image-div">
       <Link to="/oils">
@@ -28,7 +32,6 @@ const Home = () => {
         {/* <img id="flowers-photo" src={flowers} alt="flowers" /> */}
         {/* </div> */}
        
-
       </div>
       <div className="home-title">Best Sellers</div>
       <div id="pop-main">
@@ -41,12 +44,16 @@ const Home = () => {
                 </Link>
                 <div>{oil.name}</div>
               </div>
+              
             </div>
           );
         })}
       </div>
+     
+      </Layout>
       
-    </Layout>
+   </>
+   
   ) : (
     <div>dd</div>
   );

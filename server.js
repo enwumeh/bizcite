@@ -7,8 +7,6 @@ const cors = require("cors");
 const path = require("path");
 const port = process.env.PORT || 3002;
 
-//process.env.PORT
-//process.env.NODE_ENV => prodution or undefined
 
 //ALL OILS
 app.use(cors());
@@ -148,7 +146,7 @@ app.delete("/api/v1/oils/:id", async (req, res) => {
 app.get('*', (req, res) => {
   // res.send("theres no path with that name")
   // console.log("theres no path with that name")
-  res.sendFile(path.join(__dirname , '/client/build/index.html'));
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
   // res.sendFile(path.resolve(__dirname + '/../dist/index.html'));
 
 });

@@ -9,7 +9,6 @@ ul.big-list {
 }
 
 .list {
-  // box-shadow: 0px 4px 0px 0px rgba(65, 63, 63, 0.5);
   list-style-type: none;
   display: flex;
   min-height:1vh;
@@ -36,6 +35,4 @@ a.Link:hover {
   border-bottom: 1px solid#a28536;
   color: #ddbd65;
   overflow: hidden;
-
-  // -webkit-animation: circle 1.5s ease-in forwards;
 }

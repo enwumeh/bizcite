@@ -1,12 +1,15 @@
 import React from "react";
 import "../styles/scss/about.scss";
 import Layout from "../components/Layout";
+
 import { Link } from "react-router-dom";
 import photo from "../images/me-photo.jpeg";
 
 const About = () => {
   return (
+    <>
     <Layout>
+      
       <div className="about-div">
         <p className="about-p">
           It all started when I was gifted Pink Friday by Nicki Minaj Perfume
@@ -49,7 +52,8 @@ const About = () => {
           </div>
         <Link to="/oils"></Link>
       </div>
-    </Layout>
+      </Layout>
+      </>
   );
 };
 
