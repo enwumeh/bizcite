@@ -8,7 +8,7 @@ const Blog = () => {
       <h1>See Latest Blog articles here Smell Luxurious for Less</h1>
       <div>
         <div id="blog1">
-          <div>How to choose am </div>
+          <div>How to choosee am </div>
           <button>read more</button>
         </div>
         <div id="blog2">
