@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from "react";
-// import FindOils from "../APIs/FindOils";
 import { OilsContext } from "../context/OilsContext";
 import "../styles/scss/oils.scss";
 import Layout from "../components/Layout";
@@ -8,38 +7,27 @@ import { Link } from "react-router-dom";
 const Oils = () => {
   const { oils, setOils } = useContext(OilsContext);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        // const response = await FindOils.get("/");
-        const data = JSON.parse(window.localStorage.getItem('oils'))
-        if (data) {
-          console.log("DATA", data)
-          // window.localStorage.setItem('oils', JSON.stringify(oils));
-          setOils(data)
-          //
-       }
-        // window.location = '/';
-      } catch (error) {
-        console.log("whats wrong", error);
-      }
-    };
-    getData();
-  }, [setOils]);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const data = JSON.parse(window.localStorage.getItem('oils'))
+  //       if (data) {
+  //         console.log("DATA", data)
+  //         setOils(data)
+  //      }
+  //     } catch (error) {
+  //       console.log("whats wrong", error);
+  //     }
+  //   };
+  //   getData();
+  // }, [setOils]);
 
-
-  React.useEffect(() => {
-    window.localStorage.setItem('oils', JSON.stringify(oils));
-    // window.localStorage.setItem('oils', 333)
-
-  },[oils]);
-
- 
 
   // React.useEffect(() => {
-  //   window.localStorage.setItem('oils', oils);
-  // }, [oils]);
+  //   window.localStorage.setItem('oils', JSON.stringify(oils));
+  // },[oils]);
 
+ 
   return (
     <Layout>
       <div id="oils-main">
